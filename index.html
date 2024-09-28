@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Website Example</title>
+  <title>Stylish Website Example</title>
   <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
@@ -18,8 +19,10 @@
   </header>
 
   <section id="content">
-    <h1>Welcome to the Website</h1>
-    <p>This is the home section.</p>
+    <div class="intro">
+      <h1>Welcome to Our Website</h1>
+      <p>Explore our labs and learn more about us.</p>
+    </div>
   </section>
 
   <div id="lab-menu" class="hidden">
@@ -32,50 +35,89 @@
     </ul>
   </div>
 
+  <footer>
+    <p>&copy; 2024 Stylish Web. All rights reserved.</p>
+  </footer>
+
   <script src="js/script.js"></script>
   <style>
-  /* Basic styling */
-body {
-  font-family: Arial, sans-serif;
+  /* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* Basic reset */
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+}
+
+/* Header Styling */
 header {
-  background-color: #333;
-  padding: 10px 0;
+  background-color: #4a90e2;
+  padding: 20px 0;
   text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 nav ul {
   list-style: none;
-  padding: 0;
 }
 
 nav ul li {
   display: inline;
-  margin: 0 15px;
+  margin: 0 20px;
 }
 
 nav ul li a {
-  color: #fff;
+  color: white;
   text-decoration: none;
+  font-weight: 600;
   font-size: 18px;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease;
 }
 
+nav ul li a:hover {
+  background-color: #357abd;
+  border-radius: 20px;
+}
+
+/* Content Area */
 #content {
-  padding: 20px;
+  padding: 60px 20px;
   text-align: center;
+  background: linear-gradient(135deg, #e0eafc, #cfdef3);
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#content h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #2a3f54;
+}
+
+#content p {
+  font-size: 18px;
+  color: #555;
 }
 
 .hidden {
   display: none;
 }
 
+/* Labs Section */
 #lab-menu {
   text-align: center;
-  margin-top: 20px;
+  padding: 30px;
 }
 
 #lab-menu ul {
@@ -89,32 +131,111 @@ nav ul li a {
 }
 
 #lab-menu ul li a {
-  padding: 10px 15px;
-  background-color: #007bff;
+  padding: 15px 25px;
+  background-color: #4a90e2;
   color: white;
   text-decoration: none;
-  border-radius: 5px;
+  font-weight: 600;
+  border-radius: 30px;
+  transition: background-color 0.3s ease;
 }
 
 #lab-menu ul li a:hover {
-  background-color: #0056b3;
+  background-color: #357abd;
+}
+
+/* Footer Styling */
+footer {
+  background-color: #4a90e2;
+  padding: 10px;
+  text-align: center;
+  color: white;
+  margin-top: 20px;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  nav ul li {
+    display: block;
+    margin: 10px 0;
+  }
+
+  #lab-menu ul li {
+    display: block;
+    margin: 15px 0;
+  }
+
+  #content h1 {
+    font-size: 28px;
+  }
+
+  #content p {
+    font-size: 16px;
+  }
+}
+/* Thay đổi màu nền cho phần About */
+.about-background {
+  background-color: #e2f0d9; /* Màu nền nhẹ nhàng */
+  transition: background-color 0.5s ease; /* Hiệu ứng chuyển màu mượt mà */
 }
 </style>
 <script>
-document.getElementById("home").addEventListener("click", function() {
-  document.getElementById("content").innerHTML = "<h1>Welcome to the Website</h1><p>This is the home section.</p>";
+    document.getElementById("about").addEventListener("click", function() {
+  document.getElementById("content").innerHTML = `
+    <div class="intro">
+      <h1>About Me</h1>
+      <p><strong>Họ tên:</strong> Nguyễn Văn A</p>
+      <p><strong>Email:</strong> nguyenvana@example.com</p>
+      <p><strong>Điện thoại:</strong> 0123 456 789</p>
+      <p><strong>Giới thiệu:</strong> Tôi là một lập trình viên với 5 năm kinh nghiệm trong lĩnh vực phát triển web.</p>
+      <h2>Kỹ năng</h2>
+      <ul>
+        <li>HTML/CSS/JavaScript</li>
+        <li>React.js</li>
+        <li>Node.js</li>
+      </ul>
+      <h2>Kinh nghiệm làm việc</h2>
+      <ul>
+        <li><strong>Công ty A</strong> - Lập trình viên front-end (2018 - 2020)</li>
+        <li><strong>Công ty B</strong> - Lập trình viên full-stack (2020 - nay)</li>
+      </ul>
+      <p>Để biết thêm thông tin chi tiết, hãy tải CV của tôi <a href="cv_nguyenvana.pdf" download>Tại đây</a>.</p>
+    </div>`;
+    
+  // Thay đổi màu nền cho phần nội dung
+  const contentSection = document.getElementById("content");
+  contentSection.classList.add("about-background");
+
+  // Ẩn menu lab
   document.getElementById("lab-menu").classList.add("hidden");
 });
 
-document.getElementById("about").addEventListener("click", function() {
-  document.getElementById("content").innerHTML = "<h1>About Us</h1><p>This is the about section.</p>";
+// Nếu có nút nào khác (như Home), bạn nên xóa lớp màu nền đó
+document.getElementById("home").addEventListener("click", function() {
+  document.getElementById("content").innerHTML = `
+    <div class="intro">
+      <h1>Welcome to Our Website</h1>
+      <p>Explore our labs and learn more about us.</p>
+    </div>`;
+  const contentSection = document.getElementById("content");
+  contentSection.classList.remove("about-background");
   document.getElementById("lab-menu").classList.add("hidden");
 });
 
 document.getElementById("labs").addEventListener("click", function() {
-  document.getElementById("content").innerHTML = "<h1>Labs</h1><p>Select a lab below:</p>";
+  document.getElementById("content").innerHTML = `
+    <div class="intro">
+      <h1>Labs</h1>
+      <p>Select a lab below to explore:</p>
+    </div>`;
+  const contentSection = document.getElementById("content");
+  contentSection.classList.remove("about-background");
   document.getElementById("lab-menu").classList.remove("hidden");
 });
-</script>
+    </script>
 </body>
 </html>
