@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website Example</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#" id="home">Home</a></li>
+        <li><a href="#" id="about">About</a></li>
+        <li><a href="#" id="labs">Labs</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="content">
+    <h1>Welcome to the Website</h1>
+    <p>This is the home section.</p>
+  </section>
+
+  <div id="lab-menu" class="hidden">
+    <h2>Select a Lab</h2>
+    <ul>
+      <li><a href="#">Lab 1</a></li>
+      <li><a href="#">Lab 2</a></li>
+      <li><a href="#">Lab 3</a></li>
+      <li><a href="#">Lab 4</a></li>
+    </ul>
+  </div>
+
+  <script src="js/script.js"></script>
+  <style>
+  /* Basic styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  background-color: #333;
+  padding: 10px 0;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+#content {
+  padding: 20px;
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+#lab-menu {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#lab-menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+#lab-menu ul li {
+  display: inline-block;
+  margin: 10px;
+}
+
+#lab-menu ul li a {
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+#lab-menu ul li a:hover {
+  background-color: #0056b3;
+}
+</style>
+<script>
+document.getElementById("home").addEventListener("click", function() {
+  document.getElementById("content").innerHTML = "<h1>Welcome to the Website</h1><p>This is the home section.</p>";
+  document.getElementById("lab-menu").classList.add("hidden");
+});
+
+document.getElementById("about").addEventListener("click", function() {
+  document.getElementById("content").innerHTML = "<h1>About Us</h1><p>This is the about section.</p>";
+  document.getElementById("lab-menu").classList.add("hidden");
+});
+
+document.getElementById("labs").addEventListener("click", function() {
+  document.getElementById("content").innerHTML = "<h1>Labs</h1><p>Select a lab below:</p>";
+  document.getElementById("lab-menu").classList.remove("hidden");
+});
+</script>
+</body>
+</html>
