@@ -28,11 +28,11 @@
   <div id="lab-menu" class="hidden">
     <h2>Select a Lab</h2>
     <ul>
-      <li><a href="https://khanh28102005.github.io/lab1.html/" target="_blank">Lab 1</a></li>
-      <li><a href="https://khanh28102005.github.io/DangNhap.html/" target="_blank">Lab 2</a></li>
-      <li><a href="https://khanh28102005.github.io/lab3.html/" target="_blank">Lab 3</a></li>
-      <li><a href="https://khanh28102005.github.io/lab4.html/" target="_blank">Lab 4</a></li>
-      <li><a href="https://khanh28102005.github.io/lab5.html/" target="_blank">Lab 5</a></li>
+      <li><a href="https://khanh28102005.github.io/lab1.html/" id="lab1">Lab 1</a></li>
+      <li><a href="https://khanh28102005.github.io/DangNhap.html/" id="lab2">Lab 2</a></li>
+      <li><a href="https://khanh28102005.github.io/lab3.html/" id="lab3">Lab 3</a></li>
+      <li><a href="https://khanh28102005.github.io/lab4.html/" id="lab4">Lab 4</a></li>
+      <li><a href="https://khanh28102005.github.io/lab5.html/" id="lab5">Lab 5</a></li>
     </ul>
   </div>
 
@@ -42,198 +42,225 @@
 
   <script src="js/script.js"></script>
   <style>
-  /* Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+    /* Google Fonts */
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
-/* Basic reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+    /* Basic reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-body {
-  font-family: 'Poppins', sans-serif;
-  background-color: #f4f4f9;
-  color: #333;
-}
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f4f4f9;
+      color: #333;
+    }
 
-/* Header Styling */
-header {
-  background-color: #4a90e2;
-  padding: 20px 0;
-  text-align: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
+    /* Header Styling */
+    header {
+      background-color: #4a90e2;
+      padding: 20px 0;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
 
-nav ul {
-  list-style: none;
-}
+    nav ul {
+      list-style: none;
+    }
 
-nav ul li {
-  display: inline;
-  margin: 0 20px;
-}
+    nav ul li {
+      display: inline;
+      margin: 0 20px;
+    }
 
-nav ul li a {
-  color: white;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 18px;
-  padding: 10px 20px;
-  transition: background-color 0.3s ease;
-}
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 18px;
+      padding: 10px 20px;
+      transition: background-color 0.3s ease;
+    }
 
-nav ul li a:hover {
-  background-color: #357abd;
-  border-radius: 20px;
-}
+    nav ul li a:hover {
+      background-color: #357abd;
+      border-radius: 20px;
+    }
 
-/* Content Area */
-#content {
-  padding: 60px 20px;
-  text-align: center;
-  background: linear-gradient(135deg, #e0eafc, #cfdef3);
-  min-height: 60vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
+    /* Content Area */
+    #content {
+      padding: 60px 20px;
+      text-align: center;
+      background: linear-gradient(135deg, #e0eafc, #cfdef3);
+      min-height: 60vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
 
-#content h1 {
-  font-size: 36px;
-  margin-bottom: 20px;
-  color: #2a3f54;
-}
+    #content h1 {
+      font-size: 36px;
+      margin-bottom: 20px;
+      color: #2a3f54;
+    }
 
-#content p {
-  font-size: 18px;
-  color: #555;
-}
+    #content p {
+      font-size: 18px;
+      color: #555;
+    }
 
-.hidden {
-  display: none;
-}
+    .hidden {
+      display: none;
+    }
 
-/* Labs Section */
-#lab-menu {
-  text-align: center;
-  padding: 30px;
-}
+    /* Labs Section */
+    #lab-menu {
+      text-align: center;
+      padding: 30px;
+    }
 
-#lab-menu ul {
-  list-style: none;
-  padding: 0;
-}
+    #lab-menu ul {
+      list-style: none;
+      padding: 0;
+    }
 
-#lab-menu ul li {
-  display: inline-block;
-  margin: 10px;
-}
+    #lab-menu ul li {
+      display: inline-block;
+      margin: 10px;
+    }
 
-#lab-menu ul li a {
-  padding: 15px 25px;
-  background-color: #4a90e2;
-  color: white;
-  text-decoration: none;
-  font-weight: 600;
-  border-radius: 30px;
-  transition: background-color 0.3s ease;
-}
+    #lab-menu ul li a {
+      padding: 15px 25px;
+      background-color: #4a90e2;
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      border-radius: 30px;
+      transition: background-color 0.3s ease;
+    }
 
-#lab-menu ul li a:hover {
-  background-color: #357abd;
-}
+    #lab-menu ul li a:hover {
+      background-color: #357abd;
+    }
 
-/* Footer Styling */
-footer {
-  background-color: #4a90e2;
-  padding: 10px;
-  text-align: center;
-  color: white;
-  margin-top: 20px;
-}
+    /* Footer Styling */
+    footer {
+      background-color: #4a90e2;
+      padding: 10px;
+      text-align: center;
+      color: white;
+      margin-top: 20px;
+    }
 
-footer p {
-  margin: 0;
-}
+    footer p {
+      margin: 0;
+    }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  nav ul li {
-    display: block;
-    margin: 10px 0;
-  }
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      nav ul li {
+        display: block;
+        margin: 10px 0;
+      }
 
-  #lab-menu ul li {
-    display: block;
-    margin: 15px 0;
-  }
+      #lab-menu ul li {
+        display: block;
+        margin: 15px 0;
+      }
 
-  #content h1 {
-    font-size: 28px;
-  }
+      #content h1 {
+        font-size: 28px;
+      }
 
-  #content p {
-    font-size: 16px;
-  }
-}
-/* Thay đổi màu nền cho phần About */
-.about-background {
-  background-color: #e2f0d9; /* Màu nền nhẹ nhàng */
-  transition: background-color 0.5s ease; /* Hiệu ứng chuyển màu mượt mà */
-}
-</style>
-<script>
+      #content p {
+        font-size: 16px;
+      }
+    }
+
+    /* Thay đổi màu nền cho phần About */
+    .about-background {
+      background-color: #e2f0d9; /* Màu nền nhẹ nhàng */
+      transition: background-color 0.5s ease; /* Hiệu ứng chuyển màu mượt mà */
+    }
+  </style>
+  <script>
     document.getElementById("about").addEventListener("click", function() {
-  document.getElementById("content").innerHTML = `
-    <div class="intro">
-      <h1>About Me</h1>
-      <p><strong>Họ tên:</strong> Nguyễn Duy Khánh</p>
-      <p><strong>Email:</strong> 23130153@st.hcmuaf.edu.vn</p>
-      <p><strong>Điện thoại:</strong> 0325021787</p>
-      <p><strong>Giới thiệu:</strong> Tôi là một sinh viên học tại trường Đại học Nông Lâm</p>
-      <h2>Kỹ năng</h2>
-      <ul>
-        <li>HTML/CSS/JavaScript</li>
-      </ul>
-      <h2>Kinh nghiệm làm việc</h2>
-      <ul>
-        <li>Đang học tập</li>
-      </ul>
-      <p>Để biết thêm thông tin chi tiết, hãy tải CV của tôi <a href="cv_nguyenvana.pdf" download>Tại đây</a>.</p>
-    </div>`;
-    
-  // Thay đổi màu nền cho phần nội dung
-  const contentSection = document.getElementById("content");
-  contentSection.classList.add("about-background");
+      document.getElementById("content").innerHTML = `
+        <div class="intro">
+          <h1>About Me</h1>
+          <p><strong>Họ tên:</strong> Nguyễn Duy Khánh</p>
+          <p><strong>Email:</strong> 23130153@st.hcmuaf.edu.vn</p>
+          <p><strong>Điện thoại:</strong> 0325021787</p>
+          <p><strong>Giới thiệu:</strong> Tôi là một sinh viên học tại trường Đại học Nông Lâm</p>
+          <h2>Kỹ năng</h2>
+          <ul>
+            <li>HTML/CSS/JavaScript</li>
+          </ul>
+          <h2>Kinh nghiệm làm việc</h2>
+          <ul>
+            <li>Đang học tập</li>
+          </ul>
+          <p>Để biết thêm thông tin chi tiết, hãy tải CV của tôi <a href="cv_nguyenvana.pdf" download>Tại đây</a>.</p>
+        </div>`;
 
-  // Ẩn menu lab
-  document.getElementById("lab-menu").classList.add("hidden");
-});
+      // Thay đổi màu nền cho phần nội dung
+      const contentSection = document.getElementById("content");
+      contentSection.classList.add("about-background");
 
-// Nếu có nút nào khác (như Home), bạn nên xóa lớp màu nền đó
-document.getElementById("home").addEventListener("click", function() {
-  document.getElementById("content").innerHTML = `
-    <div class="intro">
-      <h1>Welcome to Our Website</h1>
-      <p>Explore our labs and learn more about us.</p>
-    </div>`;
-  const contentSection = document.getElementById("content");
-  contentSection.classList.remove("about-background");
-  document.getElementById("lab-menu").classList.add("hidden");
-});
+      // Ẩn menu lab
+      document.getElementById("lab-menu").classList.add("hidden");
+    });
 
-document.getElementById("labs").addEventListener("click", function() {
-  document.getElementById("content").innerHTML = `
-    <div class="intro">
-      <h1>Labs</h1>
-      <p>Select a lab below to explore:</p>
-    </div>`;
-  const contentSection = document.getElementById("content");
-  contentSection.classList.remove("about-background");
-  document.getElementById("lab-menu").classList.remove("hidden");
-});
-    </script>
+    // Nếu có nút nào khác (như Home), bạn nên xóa lớp màu nền đó
+    document.getElementById("home").addEventListener("click", function() {
+      document.getElementById("content").innerHTML = `
+        <div class="intro">
+          <h1>Welcome to Our Website</h1>
+          <p>Explore our labs and learn more about us.</p>
+        </div>`;
+      const contentSection = document.getElementById("content");
+      contentSection.classList.remove("about-background");
+      document.getElementById("lab-menu").classList.add("hidden");
+    });
+
+    document.getElementById("labs").addEventListener("click", function() {
+      document.getElementById("content").innerHTML = `
+        <div class="intro">
+          <h1>Labs</h1>
+          <p>Select a lab below to explore:</p>
+        </div>`;
+      const contentSection = document.getElementById("content");
+      contentSection.classList.remove("about-background");
+      document.getElementById("lab-menu").classList.remove("hidden");
+    });
+
+    // Các sự kiện cho các lab
+    document.getElementById("lab1").addEventListener("click", function(event) {
+      event.preventDefault(); // Ngừng hành động mặc định (mở trang mới)
+      window.location.href = "https://khanh28102005.github.io/lab1.html/"; // Chuyển hướng đến trang Lab 1
+    });
+
+    document.getElementById("lab2").addEventListener("click", function(event) {
+      event.preventDefault(); // Ngừng hành động mặc định (mở trang mới)
+      window.location.href = "https://khanh28102005.github.io/DangNhap.html/"; // Chuyển hướng đến trang Lab 2
+    });
+
+    document.getElementById("lab3").addEventListener("click", function(event) {
+      event.preventDefault(); // Ngừng hành động mặc định (mở trang mới)
+      window.location.href = "https://khanh28102005.github.io/lab3.html/"; // Chuyển hướng đến trang Lab 3
+    });
+
+    document.getElementById("lab4").addEventListener("click", function(event) {
+      event.preventDefault(); // Ngừng hành động mặc định (mở trang mới)
+      window.location.href = "https://khanh28102005.github.io/lab4.html/"; // Chuyển hướng đến trang Lab 4
+    });
+
+    document.getElementById("lab5").addEventListener("click", function(event) {
+      event.preventDefault(); // Ngừng hành động mặc định (mở trang mới)
+      window.location.href = "https://khanh28102005.github.io/lab5.html/"; // Chuyển hướng đến trang Lab 5
+    });
+  </script>
 </body>
 </html>
